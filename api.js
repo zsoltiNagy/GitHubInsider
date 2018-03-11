@@ -1,3 +1,5 @@
+//document.getElementById("textInput").action = getCompanyName();
+
 function getCompanyName(){
     var companyName = document.getElementById("companyName").value;
     getBasicRepoInfo(companyName);

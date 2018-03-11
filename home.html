@@ -1,33 +1,34 @@
- <!DOCTYPE html>
- <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-     <meta charset="UTF-8">
-     <title>TITLE</title>
-     <meta name="description" content="DESCRIPTION">
-    <link rel="stylesheet" href="table.css">
+  <meta charset="UTF-8">
+  <title>TITLE</title>
+  <meta name="description" content="DESCRIPTION">
+  <link rel="stylesheet" href="table.css">
+  <link rel="stylesheet" href="textInput.css">
 
-     <!--[if lt IE 9]>
+  <!--[if lt IE 9]>
        <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
      <![endif]-->
- </head>
+</head>
 
- <body>
-<p id="demo"></p>
-<textarea id="companyName" rows="1" cols="20" placeholder="you should write the company name here"></textarea>
-<button id="companyNameSubmit" onclick="getCompanyName()">Get company repos</button>
+<body>
+  <div id="textInput">
+    <p><input id="companyName" value="atom"></p>
+    <button id="companyNameSubmit" onclick="getCompanyName()">Get company repos</button>
+  </div>
+  <table id="compRepos">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Fork count</th>
+        <th>Updated at</th>
+      </tr>
+    </thead>
 
-<table id="compRepos">
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>Fork count</th>
-    <th>Updated at</th>
-  </tr>
-  </thead>
+  </table>
+  <script src="api.js"></script>
+</body>
 
-</table>
-<script src="api.js"></script>
- </body>
-
- </html>
+</html>
