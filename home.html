@@ -1,0 +1,28 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <title>TITLE</title>
+     <meta name="description" content="DESCRIPTION">
+    <link rel="stylesheet" href="PATH">
+
+     <!--[if lt IE 9]>
+       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+ </head>
+
+ <body>
+<p id="demo"></p>
+<textarea id="companyName" rows="1" cols="20" placeholder="you should write the company name here"></textarea>
+<button id="companyNameSubmit" onclick="getCompanyName()">Get company repos</button>
+
+<table id="compRepos">
+  <th>name</th>
+  <th>fork count</th>
+  <th>updated at</th>
+</table>
+<script src="api.js"></script>
+ </body>
+
+ </html>
