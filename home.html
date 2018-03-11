@@ -5,7 +5,7 @@
      <meta charset="UTF-8">
      <title>TITLE</title>
      <meta name="description" content="DESCRIPTION">
-    <link rel="stylesheet" href="PATH">
+    <link rel="stylesheet" href="table.css">
 
      <!--[if lt IE 9]>
        <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -18,9 +18,14 @@
 <button id="companyNameSubmit" onclick="getCompanyName()">Get company repos</button>
 
 <table id="compRepos">
-  <th>name</th>
-  <th>fork count</th>
-  <th>updated at</th>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Fork count</th>
+    <th>Updated at</th>
+  </tr>
+  </thead>
+
 </table>
 <script src="api.js"></script>
  </body>

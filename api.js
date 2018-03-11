@@ -23,11 +23,12 @@ function getBasicRepoInfo(companyName) {
       }
 
       var rowPart = "";
+      var tableHeads = ["Name","Fork count","Updated at"];
       for (var i = 0; i < mainList.length; i++) {
         var row = "<tr>";
         for (var j = 0; j < mainList[i].length; j++) {
           if (mainList[i] != null) {
-            rowPart = "<td>" + mainList[i][j] + "</td>";
+            rowPart = "<td data-column="+tableHeads[j]+">" + mainList[i][j] + "</td>";
           } else {
             rowPart = "undefined";
           }
