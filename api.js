@@ -1,5 +1,3 @@
-//document.getElementById("textInput").action = getCompanyName();
-
 function getCompanyName() {
   var companyName = document.getElementById("companyName").value;
   getBasicRepoInfo(companyName);
@@ -15,10 +13,8 @@ function getBasicRepoInfo(companyName) {
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) { // succesful response
       var data = JSON.parse(request.responseText);
-      // get important parts from reponse
-      var mainList = filterData(data);
-      // refill table from selected data
-      reFillTable(mainList);
+      var mainList = filterData(data); // get the important parts from reponse
+      reFillTable(mainList); // refill table from selected data
     } else {
       alert("Nope.")
     }
@@ -41,6 +37,7 @@ function filterData(data) {
 }
 
 function reFillTable(mainList) {
+  fillTHead();
   document.getElementById("compRepos").innerHTML = '';
   var tableHeads = ["Name", "Fork count", "Updated at"];
   for (let i = 0; i < mainList.length; i++) {
@@ -51,4 +48,8 @@ function reFillTable(mainList) {
     row += "</tr>"
     document.getElementById("compRepos").innerHTML += row;
   }
+}
+
+function fillTHead(){
+  document.getElementById("compRepos-thead").innerHTML = "<tr><th>Name</th><th>Fork count</th><th>Updated at</th></tr>";
 }
