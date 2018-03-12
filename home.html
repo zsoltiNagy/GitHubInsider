@@ -15,10 +15,10 @@
 
 <body>
   <div id="textInput">
-    <p><input id="companyName" value="atom"></p>
+    <div><input id="companyName" value="atom"></div>
     <button id="companyNameSubmit" onclick="getCompanyName()">Get company repos</button>
   </div>
-  <table id="compRepos">
+  <table>
     <thead>
       <tr>
         <th>Name</th>
@@ -26,7 +26,7 @@
         <th>Updated at</th>
       </tr>
     </thead>
-
+    <tbody id="compRepos"></tbody>
   </table>
   <script src="api.js"></script>
 </body>
