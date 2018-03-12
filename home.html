@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="table.css">
-  <link rel="stylesheet" href="textInput.css">
+  <link rel="stylesheet" href="header.css">
 
   <!--[if lt IE 9]>
        <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -17,19 +17,21 @@
 
 <body>
   <div class="container">
-    <div class="row">
-      <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button class="btn-primary" id="companyNameSubmit" onclick="getCompanyName()">Get company repos</button>
-        </div>
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <div class="input-group-text" id="btnGroupAddon"></div>
-          </div>
-          <input id="companyName" type="text" class="form-control" placeholder="Input group example" value="atom" aria-label="Input group example" aria-describedby="btnGroupAddon">
-        </div>
+    <div class="row" id="header">
+      <div class="col-md-4 navtitle">
+          <h1 class="display-2">GitHub</h1>
       </div>
-    </div>
+      <div class="col-md-1">
+        <img class="img-fluid" id="logo" src="http://nlopez.io/content/images/2014/Mar/blacktocat.png" alt="Blacktocat">
+      </div>
+      <div class="col-md-4 navtitle">
+            <h1 class="display-2">Insider</h1>
+      </div>
+    <ol class="breadcrumb col-md-3">
+        <li><button class="btn-primary" id="companyNameSubmit" onclick="getCompanyName()">Get company repos</button></li>
+        <li><input id="companyName" type="text" placeholder="Input group example" value="atom"></li>
+    </ol>
+</div>
     <div class="row">
       <table>
         <thead id="compRepos-thead">
